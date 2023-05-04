@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+</head>
+<style type="text/css">
+	.container{
+		border-collapse: collapse;
+		border-top: 20px;
+		border-right: 20px;
+		border-left: 20px;
+		border-bottom: 20px;
+		border-color: solid black;
+		padding: 20px;
+		background-color: grey;
+		padding-top: 30px;
+		width: 60%;
+		margin-top: 100px;
+	}
+		body{
+		background-color: darkcyan;
+	}
+	.title,p{
+		text-decoration-color: whitesmoke;
+		background-color: dimgrey;
+		
+	}
+</style>
+<script type="text/javascript">
+	let index=0;
+		const text = document.getElementById("text");
+		const message =["WELCOME TO MY PERSONAL PORTIFOLIO","IT'S MY CURRICULUM VITAE","LEARN AND ENJOY THE CONTENT"];
+		setInterval(()=>{
+			text.textContent=message[index];
+			index=(index+1)%message.length;
+		},3000);
+
+</script>
+<body>
+<center>
+	<div class="title">
+		<h1 id="text">Fill the form below</h1>
+		<p>Timah Personal Portifolio</p>
+	</div>
+	
+ <div class="container">
+
+	<form>
+          <label for="username">FullName:</label>
+           <input type="text" name="username" placeholder="FullName" required><br><br>
+           <label for="Address">Address:</label>
+           <input type="text" name="username" placeholder="Address" required><br><br>
+           <label for="Email">Email</label>
+           <input type="Email" name="Email" placeholder="Email" required>
+			<br>
+				<br>
+					<label for="password">Password</label>
+				<input type="password" name="password" placeholder="Password" required>
+				<br>
+			 <br>
+		   <button type="submit">submit</button>
+		   <a href="index.html">Sign In</a>
+	
+	</form>
+ </div>
+</center>
+
+</body>
+</html>
